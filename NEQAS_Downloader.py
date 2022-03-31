@@ -7,14 +7,14 @@ end_of_url = '/10072/report.pdf'
 menu_options = {
     1: 'Vitamin D',
     2: 'Sweat Tests',
-    3: 'Option 3',
-    4: 'Exit',
+    3: 'Exit',
 }
 
 def print_menu():
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
 
+# Fetch url code from dictionary 
 def vitamin_D ():
     dist = input('What distribution do you require? ')
     print(url + dic.VITD['url_code'] + dist + end_of_url)
