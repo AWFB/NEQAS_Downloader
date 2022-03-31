@@ -38,7 +38,6 @@ if __name__=='__main__':
             vitamin_D()
         elif option == 2:
             sweat_test()
-            break
         elif option == 3:
             print('Thanks message before exiting')
             exit()
