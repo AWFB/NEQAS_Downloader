@@ -1,6 +1,7 @@
 from options import *
 from registry import available_options
 
+
 #Get input from user and returns selected
 def read_option():
     try:
