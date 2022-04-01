@@ -1,7 +1,8 @@
 import downloader
+from registry import register
 
-option = {
+register({
     'name': 'Sweat Tests',
     'url_code': 'QEHSWT',
     'handler': downloader.handle_download_url,
-}
+})

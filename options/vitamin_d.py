@@ -1,7 +1,8 @@
 import downloader
+from registry import register
 
-option = {
+register({
     'name': 'Vitamin D',
     'url_code': 'QEHVITD',
     'handler': downloader.handle_download_url,
-}
+})
