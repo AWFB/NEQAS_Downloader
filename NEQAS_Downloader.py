@@ -1,12 +1,5 @@
-url_prefix = "https://results.ukneqas.org.uk/output"
-url_suffix = '10072/report.pdf'
-
-def handle_download_url(opts):
-    dist = input('What distribution do you require? ')
-    print()
-
-    url = '/'.join([url_prefix, opts['url_code'], dist, url_suffix])
-    print(url)
+import vitamin_d
+import sweat_test
 
 def handle_exit(opts):
     # this one doesn't need the opts at all, but we have a unified way of calling an option function, so it needs be the same
@@ -24,19 +17,10 @@ def read_option():
         return read_option()
 
 menu_options = {
-    1: {
-        'name': 'Vitamin D',
-        'url_code': 'QEHVITD',
-        'handler': handle_download_url, # a reference to the function
-    },
-    2: {
-        'name': 'Sweat Tests',
-        'url_code': 'QEHSWT',
-        'handler': handle_download_url,
-    },
+    1: vitamin_d.option,
+    2: sweat_test.option,
     3: {
         'name': 'Exit',
-        'url_code': 'QEHVITD/',
         'handler': handle_exit,
     }
 }
